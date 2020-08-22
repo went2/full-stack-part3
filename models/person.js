@@ -18,7 +18,7 @@ mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true  })
 
 const personSchema = new mongoose.Schema({
   name: { type: String, unique: true, minlength: 3 },
-  number: { type: Number, min: [8, 'number must at least 8 bits'] },
+  number: { type: Number, min: [10000000, 'number should be at least 8 digits'] },
   sex: String
 });
 
